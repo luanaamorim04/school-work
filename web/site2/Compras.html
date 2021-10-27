@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <title>Compras</title>
+		<link rel="stylesheet" href="estilo.css">
+	</head>
+	<body>
+
+		<header>
+			<img class="imgLogo" src="./imagens/LogoCOM_Topo.png">
+			<nav>
+				<table class="menu">
+				  	<tr>
+					    <td class="botao"><a href="./index.html">inicial</a></td>
+					    <td class="botao"><a href="./Mascaras.html">mascaras</a></td>
+					    <td class="botao"><a href="./Camisas.html">camisas</a></td>
+					    <td class="botao"><a href="./Compras.html">compras</a></td>
+					</tr>
+				</table>
+			</nav>
+		</header>
+
+		<section>
+			<div class="divCompras">
+				<fieldset  style="height: 325px">
+					<legend>Seleção de Produtos e Lista de Compras</legend>
+					<fieldset class="linhaProdSel">
+						<legend>Selecionado</legend>
+						<form>
+							<div class="linhaProdSel">
+								<label class="colLabSelProd">Produto: </label>
+								<select class="colSelProd" name="camisa">
+								  <option>---</option>
+								  <optgroup label="Camisas">
+								  	<option>Lisa</option>
+								  	<option>Mercúrio</option>
+								  	<option>Venus</option>
+								  	<option>Terra</option>
+								  	<option>Marte</option>
+								  	<option>Jupiter</option>
+								  	<option>Saturno</option>
+								  	<option>Urano</option>
+								  	<option>Netuno</option>
+								  	<option>Plutão</option>
+								  </optgroup>
+								   <optgroup label="Mascara">
+								  	<option>Lisa</option>
+								  	<option>Cometa</option>
+								  </optgroup>
+								</select>
+							</div>
+
+							<div class="linhaProdSel">
+								<label class="colLabSelProd">Tamanho: </label>
+								<select class="colSelProd" name="tam">
+								  <option>---</option>
+								  <option>Pequena</option>
+								  <option>Media</option>
+								  <option>Grande</option>
+								  <option>Extra Grande</option>
+								</select>
+							</div>
+
+							<div class="linhaProdSel">
+								<label class="colLabSelProd">Cor: </label>
+								<select class="colSelProd" name="cores">
+								  <option>---</option>
+								  <option>Preto</option>
+								  <option>Branco</option>
+								  <option>Azul</option>
+								  <option>Lilas</option>
+								</select>
+							</div>
+
+							<div class="linhaProdSel">
+								<label class="colLabSelProd">Modelo: </label>
+								<select class="colSelProd" name="modelo">
+								  <option>---</option>
+								  <option>T-Shirt</option>
+								  <option>Baby Look</option>
+								  <option>Sem Manga</option>
+								</select>
+							</div>
+
+							<input readonly class="linhaProdSel" name="descr">
+							<div class="elemEsq">
+								<input type="button" value="comprar">
+							</div>
+
+							<div class="elemDir">
+								<label>R$</label>
+								<input readonly class="impMedio" name="price">
+							</div>
+						</form>
+					</fieldset>	
+
+					<div class="divCol">
+						<textarea readonly class="listaCompras"></textarea>
+		
+						<div class="elemDir">
+							<label>Total R$</label>
+							<input readonly class="impMedio" name="tot">
+						</div>
+					</div>
+				</fieldset>
+
+				<div class="botoes">
+					<button onclick="continua()" name="continuar">Continuar</button>
+					<script>
+						function continua() {
+						  location.replace("./Dados.html")
+						}
+					</script>
+					<button name="limpar">Limpar</button>
+				</div>
+			</div>
+		</section>
+
+		<footer class="ender">
+			<address>Via Lactea, 1234 / Tel: (21)98765-4321 / contato@camplanetas.com.br</address>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <title>Dados</title>
+		<link rel="stylesheet" href="estilo.css">
+	</head>
+	<body>
+
+		<header>
+			<img class="imgLogo" src="./imagens/LogoCOM_Topo.png">
+			<nav>
+				<table class="menu">
+				  	<tr>
+					    <td class="botao"><a href="./index.html">inicial</a></td>
+					    <td class="botao"><a href="./Mascaras.html">mascaras</a></td>
+					    <td class="botao"><a href="./Camisas.html">camisas</a></td>
+					    <td class="botao"><a href="./Compras.html">compras</a></td>
+					</tr>
+				</table>
+			</nav>
+		</header>
+
+		<section>
+			<div class="divDados">
+				<form>
+					<fieldset>
+						<legend>Identificação </legend>
+						<div class="divLinha">
+							<label class="colPri">Nome:</label>
+							<input class="inpGrande" name="nome">
+						</div>
+						<div class="divLinha">
+							<label class="colPri">E-mail:</label>
+							<input class="inpGrande" name="email">
+						</div>
+						<div class="divLinha">
+							<label class="colPri">Endereço: </label>
+							<textarea class="inpEnder" name="endereço"></textarea>
+
+							<fieldset class="elemDir">
+								<legend>Genero:</legend>
+								<input type="radio" id="masc" name="genero">
+								<label for="masc">Masc</label>
+								
+								<input type="radio" id="fem" name="genero">
+								<label for="fem">Fem</label>
+								
+								<input type="radio" id="outro" name="genero">
+								<label for="outro">Outro</label>
+							</fieldset>
+						</div>
+						<div class="divLinha">
+							<label class="colPri">Telefone:</label>
+							<input class="inpTelef" name="telefone">
+
+							<fieldset class="elemDir">
+								<legend>Nascimento:</legend>
+								<input type="number" max="31" min="1" class="inpDD" name="diaNasc">
+								/
+								<input type="number" max="12" min="1" class="inpDD" name="mesNasc">
+								/
+								<input type="number" max="2021" min="1800" class="inpQD" value="1980" name="anoNasc">
+							</fieldset>
+						</div>
+						<div class="divLinha">
+							<label class="colPri">Celular:</label>
+							<input class="inpTelef" name="cel">
+						</div>
+					</fieldset>
+					<fieldset>
+						<legend>Pagamento </legend>
+						<fieldset class="colPriPag">
+							<legend>Cartão </legend>
+							<div class="divLinha">
+								<fieldset>
+									<legend>Bandeira:</legend>
+									<input type="radio" id="visa" name="cartao">
+									<label for="visa">Visa</label>
+									
+									<input type="radio" id="master" name="cartao">
+									<label for="master">Master</label>
+									
+									<input type="radio" id="elo" name="cartao">
+									<label for="elo">Elo</label>
+								</fieldset>
+							</div>
+							
+							<div style="margin-top: 20px">
+								<label class="colPriCompras">Validade:</label>
+								<input type="number" max="12" min="1" class="inpDD" value="4" name="mesValidade">
+								/
+								<input type="number" max="9999" min="2021" class="inpQD" value="2021" name="anoValidade">
+							</div>
+
+							<div style="margin-top: 20px">
+								<label class="colPriCompras">Número:</label>
+								<input class="inpNCC" name="numCartao">
+							</div>
+						</fieldset>
+						<textarea readonly class="comprasFeitas" name="compFeitas"></textarea>
+						<div class="valor">
+							<label>Valor R$</label>
+							<input readonly class="impMedio" name="valFinal">
+						</div>
+					</fieldset>
+					<div class="botoes">
+						<button name="enviar">Enviar</button>
+						<button name="limpar">Limpar</button>
+					</div>
+				</form>
+			</div>
+		</section>
+
+		<footer class="ender">
+			<address>Via Lactea, 1234 / Tel: (21)98765-4321 / contato@camplanetas.com.br</address>
+		</footer>
+	</body>
+</html>

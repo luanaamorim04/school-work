@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<meta charset="utf-8">
+			<script type="text/javascript">
+				function tipoTriangulo(l1, l2, l3) 
+				{
+					if (l1==l2 && l1==l3)
+					{
+						document.getElementById("ans").innerHTML = "equilátero";
+					}
+					else if (l1==l2 || l1==l3 || l2==l3)
+					{
+						document.getElementById("ans").innerHTML = "isósceles";
+					}	
+					else
+					{
+						document.getElementById("ans").innerHTML = "escaleno";
+					}
+				}
+
+			</script>
+		</head>
+			<body> 
+				<form style="text-align: center; font-size: 30px;">	
+					<label>Lado 1:</label> 
+					<input type="text" name="num1" id="num1" /><br/>  
+					<label>Lado 2:</label> 
+					<input type="text" name="num2" id="num2" /><br/>  
+					<label>Lado 3:</label> 
+					<input type="text" name="num3" id="num3" /><br/>  
+					<label> Calcular:</label>
+					<input type="button" value="Clique" onclick= "tipoTriangulo(num1.value, num2.value, num3.value)">
+
+					<div id="ans">
+					</div>
+
+				</form> 
+			</body>
+	</html>
