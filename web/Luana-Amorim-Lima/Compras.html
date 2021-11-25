@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <title>Compras</title>
+		<link rel="stylesheet" href="estilo.css">
+		<script type="text/javascript" src="./JS/compras.js"></script>  
+	</head>
+	<body>
+
+		<header>
+			<img class="imgLogo" src="./imagens/LogoCOM_Topo.png">
+			<nav>
+				<table class="menu">
+				  	<tr>
+					    <td class="botao"><a href="./index.html">inicial</a></td>
+					    <td class="botao"><a href="./Mascaras.html">mascaras</a></td>
+					    <td class="botao"><a href="./Camisas.html">camisas</a></td>
+					    <td class="botao"><a href="./Compras.html">compras</a></td>
+					</tr>
+				</table>
+			</nav>
+		</header>
+
+		<section>
+			<div class="divCompras">
+				<fieldset>
+					<legend>Identificação </legend>
+					<div class="divLinha">
+						<label class="colPri">Nome:</label>
+						<input class="inpGrande" name="nome">
+					</div>
+					<div class="divLinha">
+						<label class="colPri">E-mail:</label>
+						<input class="inpGrande" name="email">
+					</div>
+					<div class="divLinha">
+						<label class="colPri">Endereço: </label>
+						<textarea class="inpEnder" name="endereço"></textarea>
+
+						<fieldset class="elemDir">
+							<legend>Genero:</legend>
+							<input type="radio" id="masc" name="genero">
+							<label for="masc">Masc</label>
+							
+							<input type="radio" id="fem" name="genero">
+							<label for="fem">Fem</label>
+							
+							<input type="radio" id="outro" name="genero">
+							<label for="outro">Outro</label>
+						</fieldset>
+					</div>
+					<div class="divLinha">
+						<label class="colPri">Telefone:</label>
+						<input class="inpTelef" name="telefone">
+
+						<fieldset class="elemDir">
+							<legend>Nascimento:</legend>
+							<input type="number" max="31" min="1" class="inpDD" name="diaNasc">
+							/
+							<input type="number" max="12" min="1" class="inpDD" name="mesNasc">
+							/
+							<input type="number" max="2021" min="1800" class="inpQD" value="1980" name="anoNasc">
+						</fieldset>
+					</div>
+					<div class="divLinha">
+						<label class="colPri">Celular:</label>
+						<input class="inpTelef" name="cel">
+					</div>
+				</fieldset>
+				<fieldset  style="height: 325px">
+					<legend>Seleção de Produtos e Lista de Compras</legend>
+					<fieldset class="linhaProdSel">
+						<legend>Selecionado</legend>
+						<form>
+							<div class="linhaProdSel">
+								<label class="colLabSelProd">Produto: </label>
+								<select class="colSelProd" id="camisa" name="camisa" onchange="prodSelect(); desc()">
+								  <option>---</option>
+								  <optgroup label="Camisas">
+								  	<option>Lisa</option>
+								  	<option>Mercúrio</option>
+								  	<option>Venus</option>
+								  	<option>Terra</option>
+								  	<option>Marte</option>
+								  	<option>Jupiter</option>
+								  	<option>Saturno</option>
+								  	<option>Urano</option>
+								  	<option>Netuno</option>
+								  	<option>Plutão</option>
+								  </optgroup>
+								   <optgroup label="Mascara">
+								  	<option value="Mas. Lisa">Lisa</option>
+								  	<option value="Mas. Cometa">Cometa</option>
+								  </optgroup>
+								</select>
+							</div>
+
+							<div class="linhaProdSel">
+								<label class="colLabSelProd">Cor: </label>
+								<select onchange="desc()" class="colSelProd" id = "cores" name="cores" disabled>
+								  <option>---</option>
+								  <option value = "Pr">Preto</option>
+								  <option value = "Br">Branco</option>
+								  <option value = "Az" id = "azul">Azul</option>
+								  <option value = "Li" id = "lilas">Lilas</option>
+								</select>
+							</div>
+
+							<div class="linhaProdSel">
+								<label class="colLabSelProd">Tamanho: </label>
+								<select onchange="desc()" class="colSelProd" id = "tam" name="tam" disabled>
+								  <option>---</option>
+								  <option value="P">Pequena</option>
+								  <option value="M">Media</option>
+								  <option value="G">Grande</option>
+								  <option id="GG"value="GG">Extra Grande</option>
+								</select>
+							</div>
+
+							<div class="linhaProdSel">
+								<label class="colLabSelProd">Modelo: </label>
+								<select onchange="desc()" class="colSelProd" id = "modelo" name="modelo" disabled>
+								  <option>---</option>
+								  <option value="TS">T-Shirt</option>
+								  <option value="BL">Baby Look</option>
+								  <option value="SM">Sem Manga</option>
+								</select>
+							</div>
+
+							<input readonly class="linhaProdSel" id = "descr" name="descr">
+							<div class="elemEsq">
+								<input onclick="comprar()" type="button" value="comprar">
+							</div>
+
+							<div class="elemDir">
+								<label>R$</label>
+								<input readonly class="impMedio" id = "price" name="price">
+							</div>
+						</form>
+					</fieldset>	
+
+					<div class="divCol">
+						<textarea readonly class="listaCompras" id="lista"></textarea>
+		
+						<div class="elemDir">
+							<label>Total R$</label>
+							<input readonly class="impMedio" value = "0" name="tot" id="tot">
+						</div>
+					</div>
+				</fieldset>
+
+				<div class="botoes">
+					<button onclick="continua()" name="continuar">Continuar</button>
+					<button onclick="limparTudo()" name="limpar">Limpar</button>
+				</div>
+			</div>
+		</section>
+
+		<footer class="ender">
+			<address>Via Lactea, 1234 / Tel: (21)98765-4321 / contato@camplanetas.com.br</address>
+		</footer>
+	</body>
+</html>

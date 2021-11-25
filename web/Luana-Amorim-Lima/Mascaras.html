@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <title>Mascaras</title>
+		<link rel="stylesheet" href="estilo.css">
+		<script type="text/javascript" src="./JS/mascaras.js"></script>
+	</head>
+	<body>
+		<header>
+			<img class="imgLogo" src="./imagens/LogoCOM_Topo.png">
+			<nav>
+				<table class="menu">
+				  	<tr>
+					    <td class="botao"><a href="./index.html">inicial</a></td>
+					    <td class="botao"><a href="./Mascaras.html">mascaras</a></td>
+					    <td class="botao"><a href="./Camisas.html">camisas</a></td>
+					    <td class="botao"><a href="./Compras.html">compras</a></td>
+					</tr>
+				</table>
+			</nav>
+		</header>
+
+		<section>
+			<div class="texto" style="font-size: 20px">Tempo de Mascaras</div>
+			<div class="texto">
+				<ul class="lisDescricao">
+					<li>Características</li>
+
+					<ul class="lisCarac">
+						<li>
+							Cores: 
+							<table style="margin-top: -35px; margin-left: 50px; margin-bottom: -15px">
+								<tr>
+									<td>
+										<a onclick="abre(1)" id="linkPreto">
+											<div class = "imgCorMasc" style="background-color: black"></div>
+										</a>
+									</td>
+									<td>
+										<a onclick="abre(0)" id="linkBranco">
+											<div class = "imgCorMasc" style="background-color: white"></div>
+										</a>
+									</td>
+								</tr>
+							</table>
+						</li>
+						<li>Três camadas</li>
+						<li>Material: 100% algodão</li>
+						<li>Ajuste na nuca</li>
+						<li>Clip nasal interno ajustável</li>
+						<li>Tamanhos: P, M e G</li>
+					</ul>
+				</ul>
+			</div>
+
+			<div style="display:none" class="janInfo" id="divMas">
+				<p id="texto"></p>
+				<center style="margin: 10px"><img class="imgMasc" id="imgMas"></center>
+				<button name="fechar" onclick="fechar()">Fechar</button>
+			</div>
+
+		</section> 
+
+		<footer class="ender">
+			<address>Via Lactea, 1234 / Tel: (21)98765-4321 / contato@camplanetas.com.br</address>
+		</footer>
+	</body>
+	
+</html>

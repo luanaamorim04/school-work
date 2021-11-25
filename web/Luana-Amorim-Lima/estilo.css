@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish&family=Open+Sans&display=swap');
+
+header{
+	padding: 0px;
+	margin-bottom: 0px;
+	border-bottom: 0px;
+	text-align: center;
+	display: block;
+}
+
+section{
+	display: block;
+}
+
+footer{
+	display: block;
+}
+
+body {
+  background-color: #551177;
+  color: #FFFF00;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+
+nav{
+	display: block;
+	border-bottom: solid 2px;
+	padding-bottom: 4px;
+	margin: 2px;
+	text-align: center;
+	font-size: 18px;
+	font-family: 'Mulish', sans-serif;
+}
+
+a{
+	text-decoration: none;
+	color: #FFFF00;
+}
+
+a:visited{
+	color: #EEEE00;
+}
+
+.ender{
+	border-top: solid 2px;
+	text-align: center;
+	font-size: 14px;
+	padding: 4px;
+	padding-top: 4px ;
+}
+
+.imgLogo{
+	margin-bottom: 4px;
+	padding-bottom: 4px;
+}
+
+.apres{
+	text-align: center;
+	font-size: 18px;
+}
+
+nav .menu{
+	margin: 1px auto;
+}
+
+nav .botao{
+	display: inline-block;
+	width: 120px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 4px;
+	padding-right: 4px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-right: 4px;
+	margin-left: 4px;
+}
+
+.ilusMasc{
+	margin: auto;
+	text-align: center;
+}
+
+.imgMasc{
+	border: orange solid 4px; 
+	margin: auto;
+	display: block;
+}
+
+.lisDescricao{
+	list-style-type: square;
+	font-size: 18px;
+	color: #FFFF00;
+}
+
+.lisCarac{
+	font-size: 16px;
+	list-style-image: url("./imagens/Seta18.png");
+}
+
+.lisCarac li{
+	margin-top: 10px;
+	padding: 10px; 
+}
+
+.tabInfo{
+	border: solid;
+	border-collapse: collapse;
+	background-color: #FFFFCC;
+	color: #2255AA;
+	margin: auto;
+	margin-bottom: 20px;
+	font-family: "Open Sans", sans-serif;
+}
+
+.tabInfo td, th{
+	border: solid 3px;
+	border-color: #77CCDD;
+	height: 25px;
+	padding: 6px 6px 4px 6px;
+	text-align: center;
+}
+
+.tabInfo .linTH{
+	background-color: #0099DD;
+	color: #FFFFFF;
+	text-align: center;
+}
+
+.tabInfo .colTH{
+	color: #005599;
+	background-color: #FFFFFF;
+	width: 104px;
+	text-align: center;
+}
+
+.tabInfo img{
+	width: 220px;
+	height: 350px;
+}
+
+.tabInfo .imgCel{
+	text-align: center;
+	background-color: #FFFFFF;
+}
+
+.tabInfo .colMenu{
+	text-align: center;
+	width: 120px;
+}
+
+.colMenu a{
+	color: #005599;
+}
+.tabInterna{
+	margin: 0px;
+	width: 100px;
+}
+
+.tabInterna td{
+	width: 50%;
+}
+
+.tabInterna img{
+	width: 30px;
+	height: 30px;
+}
+
+.divCompras{
+	width: 580px;
+	height: 600px;
+	color: #2255AA;
+	background-color: #EEEEAA;
+	padding: 6px 6px 15px 6px;
+	margin: 20px auto;
+	border: solid 2px;
+	border-color: #77CCDD;
+}
+
+.divCol{ /*para alinhar total com a lista de compras*/
+	height: 280px;
+	width: 230px;
+	float: right;
+	margin-bottom: 5px;
+}
+
+.divDados{
+	width: 560px;
+	height: 300px;
+	color: #2255AA;
+	background-color: #EEEEAA;
+	padding: 6px 6px 15px 6px;
+	margin: 20px auto;
+	border: solid 2px;
+	border-color: #77CCDD;
+}
+
+.listaCompras{
+	width: 230px;
+	height: 230px;
+	float: right;
+	margin-top: 8px;
+	margin-left: 10px;
+	margin-bottom: 40px;
+}
+
+.colLabSelProd{
+	float: left;
+	height: 40px;
+	width: 100px; /*não tem como 260 caber em 230*/
+}
+
+.colSelProd{
+	float: left;
+	width: 150px; /*achei que ficou mais parecido com a imagem*/
+}
+
+.linhaProdSel{
+	width: 250px;
+	margin-bottom: 4px; /*achei mais parecido*/
+	float: left;
+}
+
+.elemEsq{
+	display: block;
+	float: left;
+}
+
+.elemDir{
+	display: block;
+	float: right;
+}
+
+.impMedio{
+	width: 80px;
+}
+
+.botoes{
+	float: right;
+	margin: 10px 10px 0px 10px;
+}
+
+.texto{
+	margin: 20px;
+	padding-left: 300px;
+}
+
+.fsEsq{
+	float: left;
+	display: inline;
+	margin: 0px;
+}
+
+.fsDir{
+	float: right;
+	display: inline;
+	margin: 0px;
+}	
+
+.divLinha{
+	margin-bottom: 6px;
+}
+
+.inpGrande{
+	width: 400px;
+}
+
+.impTelef{
+	width: 90px;
+}
+
+.inpEnder{
+	width: 200px;
+	height: 60px;
+	resize: none;
+}
+
+.colPri{
+	float: left;
+	display: block;
+	width: 90px;
+}
+
+.inpDD{
+	width: 30px;
+}
+
+.inpQD{
+	width: 50px;
+}
+
+.inpNCC{
+	width: 130px;
+}
+
+.colPriCompras{
+	float: left;
+	display: block;
+	width: 86px;
+}
+
+.colPriPag{
+	float: left;
+	display: block;
+	width: 230px; /*achei mais parecido com a imagem*/	
+}
+
+.comprasFeitas{
+	width: 230px;
+	height: 180px;
+	float: right;
+	margin-top: 8px;
+	margin-left: 10px;
+}
+
+.valor{
+	float: right;
+	margin-top: 15px;
+	margin-left: 300px;
+}
+
+.imgCorMasc{
+	width: 30px;
+	height: 30px;
+	margin: 5px;
+	border: 2px solid orange;
+	vertical-align: center;
+}
+
+.janInfo{
+	text-align: center;
+	font-size: 30px;
+	margin: 30px;
+}
+
+.janela{
+	display: none;
+	position: fixed;
+	bottom: 0;
+	right: 15px;
+	border: 3px solid #f1f1f1;
+	z-index: 9;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

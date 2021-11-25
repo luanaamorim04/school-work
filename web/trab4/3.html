@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf8" name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <style>
+            canvas
+            {
+                border:1px solid#d3d3d3;
+                background-color: #f1f1f1;
+            }
+        </style>
+    </head>
+    <body onload="startGame()">
+        <script>
+            var myGamePiece;
+            function startGame()
+            {
+                myGamePiece = new component(50, 50, "purple", 80, 75);
+                myGameArea.start();
+            }
+
+            var myGameArea = 
+                {
+                canvas: document.createElement("canvas"),
+                
+                start : function() {
+                    this.canvas.width = 480;
+                    this.canvas.height= 270;
+                    this.context = this.canvas.getContext("2d");
+                    document.body.insertBefore( this.canvas, document.body.childNodes[0]);
+                    this.frameNo = 0;
+                    this.interval= setInterval(updateGameArea, 0);
+                },
+                
+                stop : function() {
+                    clearInterval(this.interval);
+                },    
+                
+                clear: function() {
+                    this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+                }
+            }
+
+            function component(width, height, color, x, y) 
+            {
+                this.width= width;
+                this.height= height;
+                this.angle= 0;
+                this.x= x;
+                this.y= y;
+                this.update = function() {
+                    ctx= myGameArea.context;
+                    ctx.save();
+                    ctx.translate(this.x/2, this.y/2);
+                    ctx.rotate(this.angle);
+                    var grd = ctx.createLinearGradient(x, y, 100, 0);
+                    grd.addColorStop(0, "blue");
+                    grd.addColorStop(1, color);
+                    ctx.fillStyle = grd;
+                    ctx.fillRect(this.width/ -2, this.height/ -2, this.width, this.height);
+                    ctx.restore();    
+                }
+            }
+
+            function updateGameArea() 
+            {
+                myGameArea.clear();
+                myGamePiece.angle+= 1 * Math.PI/ 180;
+                myGamePiece.update();
+            }
+
+        </script>
+        <p> O quadrado está rodando 1 grau a cada instante de tempo que a areado jogo é atualizada (50 vezes por segundo)</p>
+        <p>Observacao: A propriedade do angulo precisa ser em radiano. Para conversao lembre-se das aulas de matemática(angulo_graus* Math.PI/ 180)</p>
+    </body>
+</html>
+
