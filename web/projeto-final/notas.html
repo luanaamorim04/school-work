@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <title>Notas</title>
+		<link rel="stylesheet" href="estilo.css">
+		<script type="text/javascript" src="./script.js"></script> 
+        <style>
+            table{
+                border-spacing: 0px;
+            }
+        </style>
+	</head>
+	<body>
+
+		<header class="menu">
+            <a href="./index.html"> 
+                <div class="esq_menu">
+                    <div>
+                        <img src="./imagens/logo.png" class="cartola">
+                    </div>
+                    
+                </div>
+                <div class="esq_menu">
+                    <p style="margin-top: 20px;font-size: 30px;">Portal do aluno</p>
+                </div>
+            </a>
+            <a href="./settings.html">
+                <div class="dir_menu">
+                    <img src="./imagens/logout.png" class="icone_menu">
+                </div>
+            </a>
+            
+            <a href="./settings.html">
+                <div class="dir_menu">
+                    <img src="./imagens/settings.png" class="icone_menu">
+                </div>
+            </a>
+        </header>
+
+		<section>
+            <div style="resize: vertical; overflow: auto" class="caixa" id='caixa1'>
+                <table>
+                    <td>
+                        <input class="mat" readonly type="text" value="Matérias">
+                        </input>
+                    </td>
+                    <td>
+                        <input class="infoS" readonly type="text" value="Faltas">
+                        </input>
+                    </td>
+                    <td>
+                        <input class="infoS" readonly type="text" value="Nota1">
+                        </input>
+                    </td>
+                    <td>
+                        <input class="infoS" readonly type="text" value="Nota2">
+                        </input>
+                    </td>
+                    <td>
+                        <input class="infoS" readonly type="text" value="Média">
+                        </input>
+                    </td>
+                </table>
+                
+                <script type="text/javascript">
+                    for (let i = 0; i < materias.length; i++)
+                    {
+                        let table = document.createElement('table');
+                        document.getElementById('caixa1').appendChild(table);
+
+                        table.appendChild(criaMat("mat", materias[i], materias[i], 1));
+                        table.appendChild(criaMat("infoS", materias[i] + "f", 0, 1));
+                        table.appendChild(criaMat("infoS", materias[i] + "1", 0, 1));
+                        table.appendChild(criaMat("infoS", materias[i] + "2", 0, 1));
+                        table.appendChild(criaMat("infoS", materias[i] + "t", 0, 1));
+                    }
+                </script> 
+            </div>
+		</section>
+
+		<footer>
+            <div>
+                <p class="embaixo">Av. Maracanã, 229 - Maracanã, Rio de Janeiro - RJ, 20271-110. Copyright J+L</p>
+            </div>
+        </footer>
+	</body>
+</html>

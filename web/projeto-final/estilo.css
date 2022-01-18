@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+.caixa{
+	border: solid 2px #27285C;
+	background-color: #E3F2FD;
+	width: 1000px;
+	height: 400px;
+	margin: auto;
+	margin-top: 100px;
+    margin-bottom: 100px;
+    border-radius: 3px;
+}
+
+.icone{
+    border-radius: 30px;
+	width: 200px;
+	text-align: center;
+}	
+
+.aviso{
+	width: 600px;
+	height: 10px;
+	border-left: solid 2px;
+
+}
+
+.icone:hover{
+	background-color: #9cacb7;
+}
+
+.imgIcon{
+	width: 100px;
+	height: 100px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+html,body {
+    margin:0;
+    padding:0;
+    font-family: 'Roboto Mono', monospace;
+    background-color: #F5F5F5;
+    text-align: center;
+    align-content: center;
+}
+
+a:visited{
+    color:black;
+    text-decoration: none;
+}
+
+a{
+    color:black;
+    text-decoration: none;
+}
+
+header{
+    background-color:#E3F2FD;
+}
+
+.cartola{
+    height: 80px;
+    width: 80px;
+}
+
+.menu{
+    width: 100%;
+    height: 35px;
+    border-bottom: 2px solid #27285C;
+    text-align: center;
+    vertical-align: middle;
+    padding: 30px 0;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 28px;
+}
+
+.esq_menu{
+    float: left;
+    margin-top: -20px;
+    margin-left: 30px;
+    flex-direction: row;
+
+}
+
+.dir_menu{
+    float: right;
+    margin-top: -35px;
+    margin-right: 30px;
+    flex-direction: row;
+    padding: 30px 0;
+
+}
+
+.icone_menu{
+    width: 50px;
+    height: 50px;
+}
+
+footer{
+    height: 80px;
+    background-color: #27285C;
+}
+
+.embaixo{
+    padding: 29px 0;
+    color: white;
+    text-align: center;
+    border-top: solid 1px;
+}
+
+.icone_menu:hover{
+    background-color: grey;
+}
+
+.cartola:hover{
+    background-color: grey;
+}
+
+.linha{
+    width: 530px;
+    height: 40px; 
+    border: solid 2px; 
+    border-radius: 20px;
+    background-color: #F5F5F5;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.texto{
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.config{
+    border: solid 2px #27285C;
+    background-color: #E3F2FD;
+    width: 1000px;
+    height: 200px;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    border-radius: 3px;
+}
+
+.config td, th{
+    /*border: solid 1px;*/
+    text-align: center;
+}
+
+.linhaC{
+    font-size: 20px;
+    margin-left: 30px;
+    margin-bottom: 10px;
+}
+
+#nomeD{
+    display: block;
+}
+
+#senhaD{
+    display: none;
+}
+
+#emailD{
+    display: none;
+}
+
+#atividadeD{
+    display: none;
+}
+
+.botao{
+    
+    font-size: 15px;
+}
+
+.infoS{
+    width: 100px;
+    height: 40px; 
+    background-color:  #9cacb7;
+    text-align: center;
+    font-size: 20px;
+}
+
+.mat{
+    width: 560px;
+    height: 40px;  
+    background-color:  #9cacb7;
+    text-align: center;
+    font-size: 20px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
